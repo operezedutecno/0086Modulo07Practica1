@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "36029c50-93b1-4a98-bded-2cd622282924",
+		"name": "MOD07PRACT01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5058327"
+	},
+	"item": [
+		{
+			"name": "actores-peliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/actores-peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"actores-peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peliculas-categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/peliculas-categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"peliculas-categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peliculas-idioma",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/peliculas-idioma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"peliculas-idioma"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
