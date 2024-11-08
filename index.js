@@ -1,5 +1,6 @@
 const { createServer } = require("http");
 const url = require("url");
+
 const { Pool } = require("pg");
 const Cursor = require("pg-cursor");
 
@@ -32,6 +33,7 @@ createServer(async (req, res) => {
             client.release();
             res.end(JSON.stringify({ message: "Actores con sus películas", data: result.rows }))
         }
+
         if(path == "/peliculas-categorias") {
             const result = await conPool.query(`
                 SELECT f.title, f.release_year, c.name
@@ -55,15 +57,15 @@ createServer(async (req, res) => {
             );
             const res1 = await result.read(10);
             console.log("Grupo 1*************************************************");
-            console.log(res1);
+            console.table(res1);
             const res2 = await result.read(5);
             console.log("Grupo 2*************************************************");
-            console.log(res2);
+            console.table(res2);
             const res3 = await result.read(20);
             console.log("Grupo 3*************************************************");
-            console.log(res3);
+            console.table(res3);
 
-            res.end(JSON.stringify({ message: "Películas con su idioma" }))
+            res.end(JSON.stringify({ message: "Películas con su idioma", data: [ ...res1, ...res2, ...res3] }))
         }
 
     }
